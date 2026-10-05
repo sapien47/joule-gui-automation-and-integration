@@ -1,0 +1,13 @@
+description: >
+  Developer tool for SAP GUI scripting. Dumps the GUI scripting element IDs
+  (the findById paths, such as wnd[0]/usr/ctxtFOO) of every control on the
+  currently open SAP GUI window as a table. Read-only. No parameters.
+
+title: List GUI scripting IDs
+
+conversation_starter:
+  trigger_utterance: Dump the SAP GUI scripting findById paths of the open window.
+
+target:
+  type: function
+  name: list_ui_ids

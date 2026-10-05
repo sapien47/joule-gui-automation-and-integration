@@ -1,0 +1,34 @@
+agent: ui_id_lister
+expert_in: >-
+  SAP GUI element ID lister. Parses describeUI JSON output and lists the technical
+  IDs of every element so that a developer can write GUI scripts.
+base_model: gpt-5-low
+advanced_model: gpt-5-low
+iterations: 5
+default_output_format: markdown
+preprocessing_enabled: true
+postprocessing_enabled: true
+task: >-
+  Always use the Describe UI IDs Tool before answering. Never answer without
+  calling the tool first. Call it exactly once.
+
+  Output one markdown table with the columns: Id | Type | Label | Value.
+  Include EVERY element that is a field, input, checkbox, radio button, combo
+  box, button, tab, table, tree or grid. Copy each Id character for character
+  exactly as returned, for example wnd[0]/usr/ctxtFOO. Never shorten, correct
+  or invent an Id. Label comes from LeftLabel, otherwise Tooltip, otherwise
+  leave empty. Value is the Text, or empty. Skip purely structural containers
+  and empty labels. If the table is long, keep going; do not summarize or
+  truncate. Return ONLY the table, no explanations.
+additional_context: ""
+toolkits:
+  - name: "Describe UI IDs Tool"
+    type: joule
+    config:
+      target:
+        type: function
+        name: describe_ui_ids
+        description: Returns the describeUI JSON tree for wnd[0] (the whole current window including ids, types and labels of all elements)
+      specification:
+        description: No parameters needed - captures the entire current screen
+        parameters: []

@@ -21,7 +21,7 @@ action_groups:
               session.findById(sub + "/ctxtSEPM_PRODUCT_HEADER_200-TYPE_CODE").text        = "PR";
               session.findById(sub + "/ctxtSEPM_PRODUCT_HEADER_200-CATEGORY").text         = "Notebooks";
               session.findById(sub + "/ctxtSEPM_PRODUCT_HEADER_200-MEASURE_UNIT").text     = "EA";
-              session.findById(sub + "/ctxtSEPM_PRODUCT_HEADER_200-SUPPLIER_ID").text      = "100000046";
+              session.findById(sub + "/ctxtSEPM_PRODUCT_HEADER_200-SUPPLIER_ID").text      = "100000061";
               session.findById(sub + "/ctxtSEPM_PRODUCT_HEADER_200-TAX_TARIF_CODE").text   = "1";
               session.findById(sub + "/txtSEPM_PRODUCT_HEADER_200-PRICE").text             = "549,00";
               session.findById(sub + "/ctxtSEPM_PRODUCT_HEADER_200-CURRENCY_CODE").text    = "EUR";

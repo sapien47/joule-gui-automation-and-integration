@@ -1,0 +1,12 @@
+action_groups:
+  - actions:
+      - type: agent-request
+        name: ui_id_lister
+        body: >
+          { "message": "List the element IDs of the SAP GUI screen" }
+        result_variable: agentResponse
+      - type: message
+        message:
+          type: text
+          markdown: true
+          content: "<? agentResponse.body.message ?>"

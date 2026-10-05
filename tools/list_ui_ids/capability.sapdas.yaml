@@ -1,0 +1,8 @@
+schema_version: 3.29.0
+
+metadata:
+  namespace: joule.ext
+  display_name: "List screen element IDs"
+  name: list_ui_ids
+  version: 1.0.0
+  description: Developer helper. Lists the technical element IDs, types and labels of the current SAP GUI screen so that new guided scripts can be written. Read-only.

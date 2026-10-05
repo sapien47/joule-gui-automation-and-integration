@@ -17,6 +17,17 @@ The samples are intended as a starting point for SAP customers and partners buil
 
 > 🎓 We recommend taking a look at the Discovery Center mission **[Automate SAP GUI Transactions with Joule Frontend Actions](https://discovery-center.cloud.sap/missiondetail/6117/)**, which shows step by step how these capabilities can be cloned, deployed, and used.
 
+## Fork notes
+
+This repository is a copy of [SAP-samples/joule-gui-automation-and-integration](https://github.com/SAP-samples/joule-gui-automation-and-integration). **All credit for the capabilities goes to SAP and the original contributors** (Apache-2.0, see [LICENSE](LICENSE)).
+
+What was added here after a first end-to-end setup on a demo system:
+
+- **[docs/LESSONS_LEARNED.md](docs/LESSONS_LEARNED.md)** – a plain-language guide with the problems hit on the way (Business Client settings, trusted sites, allow-lists, supplier error) and how each was fixed, with anonymised screenshots.
+- Capability namespace changed to `joule.ext`, as recommended below.
+- The supplier ID in the `execute_guided_script` capability is set to a value that exists in *that* demo system. Use F4 in your own system to find a valid one.
+- **[tools/list_ui_ids](tools/list_ui_ids)** – a small read-only helper capability that lists the technical IDs of the open SAP GUI screen, for writing new scripts.
+
 ## Capabilities
 
 ### `execute_guided_script` — Create a Product Step-by-Step
